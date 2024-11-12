@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1vmin;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  font-size: 8vmin;
+  color: #ff5722;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.box:active {
+  transform: scale(0.95);
+}
+
+#reset-btn, #new-btn {
+  padding: 1rem;
+  margin: 1rem;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+#reset-btn:hover, #new-btn:hover {
+  background: linear-gradient(135deg, #dd2476, #ff512f);
+  transform: scale(1.05);
+}
+
+#msg {
+  color: #ffeb3b;
+  font-size: 8vmin;
+  font-weight: bold;
+  animation: winner-bounce 1s ease-in-out infinite alternate;
+}
+
+.msg-container {
+  height: 30vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 1vmin;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s ease;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes winner-bounce {
+  0% {
+      transform: scale(1);
+      color: #ffeb3b;
+  }
+  100% {
+      transform: scale(1.1);
+      color: #f44336;
+  }
+}
