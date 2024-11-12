@@ -72,7 +72,7 @@ body {
 }
 
 #reset-btn:hover, #new-btn:hover {
-  background: linear-gradient(135deg, #dd2476, #ff512f);
+  background: linear-gradient(135deg, #dd2476, #f0310b);
   transform: scale(1.05);
 }
 
@@ -106,7 +106,7 @@ body {
       color: #ffeb3b;
   }
   100% {
-      transform: scale(1.1);
+      transform: scale(1.2);
       color: #f44336;
   }
 }
